@@ -13,10 +13,10 @@ Object.entries(modules).forEach(([moduleName, module]) => {
 
 // This functions is used for testing the cloud functions locally
 functions.http("TEST", (req, res) => {
-  // get module name and function name from the url (/moduleName/functionName)
+  // get module name and function name from the url (/moduleName-functionName)
   const [moduleName, functionName] = req.url
-    .split("/")
-    .filter((x) => x !== "") as [EModules, string];
+    .split("-")
+    .map((str) => str.replace("/", "")) as [EModules, string];
 
   if (modules[moduleName] && modules[moduleName][functionName]) {
     return modules[moduleName][functionName](req, res);
