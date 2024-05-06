@@ -8,6 +8,7 @@
     "start": "functions-framework --target=TEST",
     "deploy": "node deploy.js",
     "dev": "nodemon --exec  npm run start",
+    "predeploy": "npm run build",
     "prestart": "npm run build",
     "gcp-build": "npm run build"
   },
