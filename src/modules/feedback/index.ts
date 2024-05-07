@@ -5,6 +5,14 @@ import { HttpFunction } from "@google-cloud/functions-framework";
 import { TModuleExport } from "../../common/types";
 
 const provideFeedback: HttpFunction = async (req, res) => {
+  const isPositive = req.body.isPositive;
+
+  if (isPositive === undefined) {
+    res.status(400);
+    res.json({ error: "Feedback is required", status: 400 });
+    return;
+  }
+
   res.json({ success: true });
 };
 
