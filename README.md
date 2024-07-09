@@ -1,4 +1,4 @@
-# Serverless API for Glov Study Case
+# Serverless API for LLM Chatbot
 
 #### This API using Google Cloud Functions for Serverless Functions and OpenAI API for LLM Model.
 
@@ -7,13 +7,13 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/goodluckgod/glov_study_api.git
+  git clone https://github.com/goodluckgod/serverless_chatbot_study.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd glov_study_api
+  cd serverless_chatbot_study
 ```
 
 Install dependencies
